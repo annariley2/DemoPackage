@@ -1,0 +1,18 @@
+---
+title: "My Awesome Analysis"
+author: "Anna Riley"
+date: "11/28/2023"
+output: html_document
+---
+
+This Rmarkdown file will do the analysis.
+
+```{r}
+library(DemoPackage)   # load TestPackage, which includes MaxTemp data frame.
+library(ggplot2)
+
+ggplot(FlagMaxTemp, aes(x=Date, y=MaxTemp)) +
+  geom_line()
+```
+
+We see that the daily max temperature in Flagstaff varies quite a lot.
